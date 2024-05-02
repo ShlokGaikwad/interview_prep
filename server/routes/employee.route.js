@@ -49,7 +49,7 @@ employeeRouter.delete("/:id", auth, async (req, res) => {
 
 employeeRouter.get("/", auth, async (req, res) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 2;
+  const limit = parseInt(req.query.limit) || 5;
   const sortBy = req.query.sortBy || "salary";
   const sortOrder = req.query.sortOrder || "asc";
   const departmentFilter = req.query.department;
